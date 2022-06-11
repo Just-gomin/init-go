@@ -2,16 +2,19 @@ package main
 
 import "fmt"
 
-func main(){
-	// var keyword를 이용해 변수 선언을 시작
-	// var - 변수 명 - 변수 타입 - [= 값] 을 통해 메모리 할당
-	var a int = 10
-	var msg string = "Hello Variable"
+func main() {
+	var a int = 3
+	var b int
+	var c = 4 // type 생략, 우변의 타입으로 지정
+	d := 5    // 선언 대입문 : var 와 type 생략
+	fmt.Println(a, b, c, d)
 
-	// 변수의 값 변경
-	a = 20
-	msg = "Good Morning"
+	var float32DefaultVal float32
+	fmt.Println(float32DefaultVal) // 0.0
 
-	// 변수를 이용해 값을 전달
-	fmt.Println(msg, a)
+	var booleanDefaultVal bool
+	fmt.Println(booleanDefaultVal) // false
+
+	var stringDefaultVal string
+	fmt.Println(stringDefaultVal) // ""
 }
