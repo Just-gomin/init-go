@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"init-go/logger"
 )
 
 /* -------------------------------- */
@@ -28,7 +29,7 @@ func (container *Container) remain() int {
 // 물량 입고 포인터 메소드
 func (container *Container) packageInPointer(num int) {
 	if num > container.remain() {
-		fmt.Println(consoleRed, "[!]", consoleWhite, "Exceeded the capacity.")
+		logger.Warning("!", "packageInPointer", "Exceeded the capacity.")
 	} else {
 		container.amount += num
 	}
@@ -37,7 +38,7 @@ func (container *Container) packageInPointer(num int) {
 // 물량 출고 포인터 메소드
 func (container *Container) packageOutPointer(num int) {
 	if num > container.amount {
-		fmt.Println(consoleRed, "[!]", consoleWhite, "Out of stock.")
+		logger.Warning("!", "packageOutPointer", "Out of stock.")
 	} else {
 		container.amount -= num
 	}
@@ -46,7 +47,7 @@ func (container *Container) packageOutPointer(num int) {
 // 물량 입고 값 메소드
 func (container Container) packageInValue(num int) {
 	if num > container.remain() {
-		fmt.Println(consoleRed, "[!]", consoleWhite, "Exceeded the capacity.")
+		logger.Warning("!", "packageInValue", "Exceeded the capacity.")
 	} else {
 		container.amount += num
 	}
@@ -55,7 +56,7 @@ func (container Container) packageInValue(num int) {
 // 물량 출고 값 메소드
 func (container Container) packageOutValue(num int) {
 	if num > container.amount {
-		fmt.Println(consoleRed, "[!]", consoleWhite, "Out of stock.")
+		logger.Warning("!", "packageOutValue", "Out of stock.")
 	} else {
 		container.amount -= num
 	}
@@ -64,7 +65,7 @@ func (container Container) packageOutValue(num int) {
 // 물량 입고 값 타입 메서드
 func (container Container) packageInReturn(num int) Container {
 	if num > container.remain() {
-		fmt.Println(consoleRed, "[!]", consoleWhite, "Exceeded the capacity.")
+		logger.Warning("!", "packageInReturn", "Exceeded the capacity.")
 	} else {
 		container.amount += num
 	}
@@ -75,7 +76,7 @@ func (container Container) packageInReturn(num int) Container {
 // 물량 출고 값 타입 메서드
 func (container Container) packageOutReturn(num int) Container {
 	if num > container.amount {
-		fmt.Println(consoleRed, "[!]", consoleWhite, "Out of stock.")
+		logger.Warning("!", "packageOutReturn", "Out of stock.")
 	} else {
 		container.amount -= num
 	}
