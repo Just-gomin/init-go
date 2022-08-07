@@ -16,6 +16,8 @@ const white string = "\033[37m"
 /* -------------------------- */
 /*       Format String        */
 /* -------------------------- */
+const normalString = "[%s] [%-20s] : %s"
+
 const warnString = yellow + "[" + "%s" + "]" + white + " " + // specialchanr
 	cyan + "[" + "%-20s" + "]" + white + " " + // title
 	": %s\n" // body
@@ -27,6 +29,10 @@ const errorString = red + "[" + "%s" + "]" + white + " " + // specialchanr
 /* -------------------------- */
 /*       Print Function       */
 /* -------------------------- */
+func Normal(specialChar string, title string, body string) {
+	fmt.Printf(normalString, specialChar, title, body)
+}
+
 func Warning(specialChar string, title string, body string) {
 	fmt.Printf(warnString, specialChar, title, body)
 }
