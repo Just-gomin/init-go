@@ -1,12 +1,14 @@
 # 고 루틴
 
 - [스레드(Thread) in Go Routine](#스레드thread-in-go-routine)
-
   - [프로세스(Process)](#프로세스process)
   - [스레드(Thread) in Process](#스레드thread)
     - [CPU 코어와 스레드](#cpu-코어와-스레드)
   - [스레드 컨텍스트 (Thread Context)](#스레드-컨텍스트-thread-context)
   - [컨텍스트 전환 비용 (Context Switching Cost)](#컨텍스트-스위칭-비용-context-switching-cost)
+
+- [채널(Channel](#채널channel)
+  - [버퍼(Buffer)](#버퍼buffer)
 
 </br>
 
@@ -57,3 +59,11 @@ CPU 코어가 여러 스레드를 전환하면서 수행하여 발생하는 비�
     Go 언어에서는 이런 걱정을 할 필요가 없습니다. CPU 코어마다 OS 스레드를 하나만 할당해서 사용하기에 컨텍스트 전환 비용이 발생하지 않습니다.
 
 </br>
+
+## 채널(Channel)
+
+고루틴끼리 메시지를 전달할 수 있는 메세지 큐
+
+### 버퍼(Buffer)
+
+데이터를 보관할 수 있는 메모리 영역
