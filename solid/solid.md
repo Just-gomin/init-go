@@ -2,9 +2,9 @@
 
 - S : [SRP](#srpsingle-responsibility-principle-단일-책임-원칙) (Single Responsibility Principle, 단일 책임 원칙)
 - O : [OCP](#ocpopen-closed-principle-개방-폐쇄-원칙) (Open-Closed Principle, 개방-폐쇄 원칙)
-- L : LSP (Liskov Substitution Principle, 리스코프 치환 원칙)
-- I : ISP (Interface Segregation Principle, 인테페이스 분리 원칙)
-- D : DIP (Dependency Inversion Principle, 의존 관계 역전 원칙)
+- L : [LSP](#lspliskov-substitution-principle-리스코프-치환-원칙) (Liskov Substitution Principle, 리스코프 치환 원칙)
+- I : [ISP](#ispinterface-segregation-principle-인터페이스-분리-원칙) (Interface Segregation Principle, 인테페이스 분리 원칙)
+- D : [DIP](#dipdependency-inversion-principle-의존-관계-역전-원칙) (Dependency Inversion Principle, 의존 관계 역전 원칙)
 
 </br>
 
